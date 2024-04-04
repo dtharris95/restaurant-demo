@@ -1,0 +1,20 @@
+{
+  "name": "react-pocketbase-base",
+  "version": "1.0.0",
+  "description": "full stack app using yarn, pocketbase, and react",
+  "main": "index.js",
+  "author": "ArnoS",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start:stack": "concurrently \"yarn workspace frontend start\" \"yarn workspace backend start\"",
+    "start:frontend": "yarn workspace frontend start",
+    "start:backend": "yarn workspace backend start"
+  }  
+}
