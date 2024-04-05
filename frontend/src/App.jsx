@@ -1,6 +1,7 @@
 import './App.css'
 import pb from './lib/pocketbase'
 import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -17,9 +18,7 @@ function App() {
 
   return (
     <>
-      <h1>React + Pocketbase</h1>
-      <h2>The following greeting is from Pocketbase:</h2>
-      <h3>{greeting.greetingText}</h3>
+      <Navbar />
     </>
   )
 }
