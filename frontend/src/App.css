@@ -1,17 +1,28 @@
+body {
+  /* background-color: red; */
+}
+
 .main-container {
   display: flex;
-  padding: 50px 50px;
+  max-width: 1024px;
+  margin: auto;
+  padding-top: 25px;
+  background-color: white;
 }
 
 .home-cards {
   display: grid;
   grid-template-columns: repeat(3,auto);
-  grid-gap: 25px;
-  align-items: center;
+  grid-gap: 50px;
 }
 
 .card-tab {
   border-style: solid;
   border-color: black;
   padding: 35px;
+  box-shadow: 10px 10px;
+}
+
+button {
+  text-decoration: none;
 }
