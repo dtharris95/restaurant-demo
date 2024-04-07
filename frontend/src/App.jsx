@@ -2,6 +2,7 @@ import './App.css'
 import pb from './lib/pocketbase'
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Home />
     </>
   )
 }
