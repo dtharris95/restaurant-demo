@@ -3,9 +3,11 @@ import '../App.css'
 
 function Services() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div className='main-container'>
+        <h1 className='card-tab'>Services</h1>
+      </div>
+    </>
   )
 }
 

@@ -9,7 +9,7 @@ This is a base application made for quick prototyping, POC, and templating.
 https://classic.yarnpkg.com/lang/en/docs/install/
 
 ## Frontend
-This is a React Typescript frontend using Vite: 
+This is a React Javascript frontend using Vite: 
 
 https://vitejs.dev/guide/
 

@@ -8,5 +8,9 @@
   "private": true,
   "scripts": {
     "start": "./pocketbase serve"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "react-bootstrap": "^2.10.2"
   }
 }
