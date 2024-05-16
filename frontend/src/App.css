@@ -73,7 +73,7 @@ button {
   background-color: gold;
   border-style: double;
   border-color: black;
-  width: 200px;
+  width: 275px;
   display: flex;
   justify-content: center;
 }
@@ -104,6 +104,12 @@ button {
   border-color: black;
   width: 70%;
   box-shadow: 10px 10px;
+  background-color: #dad4c6;
+  padding-bottom: 50px;
+}
+
+.home-text {
+  font-weight: bold;
 }
 
 
@@ -145,8 +151,6 @@ button {
   width: 75%;
   content: '';
   display: table;
-  /* background-color: gold; */
-
 }
 
 .column {
@@ -156,25 +160,11 @@ button {
 
 .drink-column {
   width: 100%;
-  /* background-color: gold; */
 
 }
 
-.entree-items {
-  /* background-color: gold; */
-
-}
-
-.side-items {
-  /* background-color: gold; */
-}
-
-.drink-items {
-  /* background-color: gold; */
-}
-
-.menu-descriptions {
-  /* background-color: gold; */
+.entree-items, .side-items, .drink-items {
+  font-weight: bold;
 }
 
 hr {

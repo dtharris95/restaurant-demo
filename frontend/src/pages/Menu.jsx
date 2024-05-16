@@ -9,8 +9,48 @@ function Menu() {
           <h1 className='card-tab'>Menu</h1>
       </div>
       
-      {/* Entrees Section */}
+      {/* Appetizers Section */}
       <div className='menu-container'>
+
+      <div className='menu-title-container'>
+            <h1 className='page-subtitles'>Appetizers</h1>
+        </div>
+        <br></br>
+        <div className='menu-rows-container'>
+          {/* <div className='row'> */}
+          <div className='flex-container'>
+              <div className='column'>
+                <h2 className='entree-items'>Mac & Cheese Bites</h2>
+                <p className='menu-descriptions'>$7.15</p>
+              </div>
+              <div className='column'>
+                <h2 className='entree-items'>Mozzarella Sticks</h2>
+                <p className='menu-descriptions'>$8.25</p>
+              </div>
+              <div className='column'>
+                <h2 className='entree-items'>Cheese Bites</h2>
+                <p className='menu-descriptions'>$6.50</p>
+              </div>
+          </div>
+          {/* <div className='row'> */}
+          <div className='flex-container'>
+              <div className='column'>
+                <h2 className='entree-items'>Crab Rangoon</h2>
+                <p className='menu-descriptions'>$8.15</p>
+              </div>
+              <div className='column'>
+                <h2 className='entree-items'>Chips & Guacamole</h2>
+                <p className='menu-descriptions'>$6.75</p>
+              </div>
+              <div className='column'>
+                <h2 className='entree-items'>Salad</h2>
+                <p className='menu-descriptions'>Caesar, Cobb or Caprese. $8.15</p>
+              </div>
+            </div>
+        </div>
+      <hr></hr>
+
+{/* Entrees Section */}
         <div className='menu-title-container'>
             <h1 className='page-subtitles'>Entrees</h1>
         </div>
@@ -79,8 +119,8 @@ function Menu() {
                 <p className='menu-descriptions'>$5.45</p>
               </div>
               <div className='column'>
-                <h2 className='side-items'>Salad</h2>
-                <p className='menu-descriptions'>Caesar, Cobb or Caprese. $8.15</p>
+                <h2 className='side-items'>Seasoned Fries</h2>
+                <p className='menu-descriptions'>$3.15</p>
               </div>
           </div>
         </div>
@@ -120,13 +160,14 @@ function Menu() {
                 <p className='menu-descriptions'>$1.75</p>
               </div>
               <div className='drink-column'>
-                <h2 className='drink-items'>Bottled Water</h2>
-                <p className='menu-descriptions'>$1.50</p>
-              </div>
-              <div className='drink-column'>
                 <h2 className='drink-items'>Tea</h2>
                 <p className='menu-descriptions'>$1.90</p>
                 <p className='menu-descriptions'>(sweetened or unsweetened)</p>
+              </div>
+              <div className='drink-column'>
+                <h2 className='drink-items'>Beer</h2>
+                <p className='menu-descriptions'>Bud Light, Coors Light, Miller Lite ($2.95)</p>
+                <p className='menu-descriptions'>Corona, Blue Moon, Angry Orchard ($3.25)</p>
               </div>
           </div>
         </div>
