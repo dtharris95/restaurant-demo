@@ -5,26 +5,27 @@ import { Link } from 'react-router-dom'
 function Menu() {
   return (
     <>
-      <div className='main-container'>
+    <div className='main-container'>
+      <div className='flex-container'>
           <h1 className='card-tab'>Menu</h1>
       </div>
       
+      <div className='flex-container'>
       {/* Appetizers Section */}
       <div className='menu-container'>
-
-      <div className='menu-title-container'>
-            <h1 className='page-subtitles'>Appetizers</h1>
+        <div className='menu-title-container'>
+          <h1 className='page-subtitles'>Appetizers</h1>
         </div>
         <br></br>
         <div className='menu-rows-container'>
-          {/* <div className='row'> */}
-          <div className='flex-container'>
+          <div className='menu-flex-container'>
               <div className='column'>
                 <h2 className='entree-items'>Mac & Cheese Bites</h2>
                 <p className='menu-descriptions'>$7.15</p>
               </div>
               <div className='column'>
                 <h2 className='entree-items'>Mozzarella Sticks</h2>
+                <p></p>
                 <p className='menu-descriptions'>$8.25</p>
               </div>
               <div className='column'>
@@ -32,8 +33,7 @@ function Menu() {
                 <p className='menu-descriptions'>$6.50</p>
               </div>
           </div>
-          {/* <div className='row'> */}
-          <div className='flex-container'>
+          <div className='menu-flex-container'>
               <div className='column'>
                 <h2 className='entree-items'>Crab Rangoon</h2>
                 <p className='menu-descriptions'>$8.15</p>
@@ -48,7 +48,7 @@ function Menu() {
               </div>
             </div>
         </div>
-      <hr></hr>
+      {/* <hr></hr> */}
 
 {/* Entrees Section */}
         <div className='menu-title-container'>
@@ -56,8 +56,7 @@ function Menu() {
         </div>
         <br></br>
         <div className='menu-rows-container'>
-          {/* <div className='row'> */}
-          <div className='flex-container'>
+          <div className='menu-flex-container'>
               <div className='column'>
                 <h2 className='entree-items'>Ribeye Steak</h2>
                 <p className='menu-descriptions'>Bone-in, prime ribeye, 18 or 22 oz. $24.95</p>
@@ -71,8 +70,7 @@ function Menu() {
                 <p className='menu-descriptions'>Covered in honey, soy sauce, lemon juice and red pepper flakes. Garnished with sliced lemon. $19.95</p>
               </div>
           </div>
-          {/* <div className='row'> */}
-          <div className='flex-container'>
+          <div className='menu-flex-container'>
               <div className='column'>
                 <h2 className='entree-items'>Lasagna</h2>
                 <p className='menu-descriptions'>Mozarella slices, parmesan cheese, and meat sauce. $20.95</p>
@@ -87,7 +85,7 @@ function Menu() {
               </div>
             </div>
         </div>
-      <hr></hr>
+      {/* <hr></hr> */}
 
       {/* Sides section */}
         <div className='menu-title-container'>
@@ -95,7 +93,7 @@ function Menu() {
         </div>
         <br></br>
         <div className='menu-rows-container'>
-          <div className='flex-container'>
+          <div className='menu-flex-container'>
               <div className='column'>
                 <h2 className='side-items'>Mac & Cheese</h2>
                 <p className='menu-descriptions'>Optional: add bacon bits. $3.99</p>
@@ -109,7 +107,7 @@ function Menu() {
                 <p className='menu-descriptions'>Optional: add bacon bits. $2.50</p>
               </div>
           </div>
-          <div className='flex-container'>
+          <div className='menu-flex-container'>
               <div className='column'>
                 <h2 className='side-items'>Onion Rings</h2>
                 <p className='menu-descriptions'>$4.15</p>
@@ -124,7 +122,7 @@ function Menu() {
               </div>
           </div>
         </div>
-      <hr></hr>
+      {/* <hr></hr> */}
 
       {/* Drinks */}
         <div className='menu-title-container'>
@@ -132,7 +130,7 @@ function Menu() {
         </div>
         <br></br>
         <div className='menu-rows-container'>
-        <div className='flex-container'>
+        <div className='menu-flex-container'>
               <div className='drink-column'>
                 <h2 className='drink-items'>Coca-Cola</h2>
                 <p className='menu-descriptions'>$2.30</p>
@@ -150,7 +148,7 @@ function Menu() {
                 <p className='menu-descriptions'>$2.15</p>
               </div>
           </div>
-          <div className='flex-container'>
+          <div className='menu-flex-container'>
               <div className='drink-column'>
                 <h2 className='drink-items'>Hi-C</h2>
                 <p className='menu-descriptions'>$2.50</p>
@@ -172,6 +170,9 @@ function Menu() {
           </div>
         </div>
       </div>
+      </div>
+    </div>
+    <div className='main-container'></div>
     </>
   )
 }

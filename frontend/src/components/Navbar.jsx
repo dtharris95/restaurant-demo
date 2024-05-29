@@ -10,7 +10,7 @@ function Navbar() {
               <Link to='/' className='nav-title'>Harris Kitchen Table</Link>
                 <ul className='nav-menu'>
                     <CustomLink to='/menu'>Menu</CustomLink>
-                    {/* <CustomLink to='/services'>Services</CustomLink> */}
+                    <CustomLink to='/services'>Specials</CustomLink>
                     <CustomLink to='/contact'>Contact</CustomLink>
                 </ul>
             </div>

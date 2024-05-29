@@ -4,29 +4,33 @@ import '../App.css'
 function Contact() {
   return (
     <>
-    <div className='flex-container'>
-      <div className='main-container'>
-        <h1 className='card-tab'>Contact</h1>
+    <div className='main-container'>
+      <div className='flex-container'>
+        {/* <div className='main-container'> */}
+          <h1 className='card-tab'>Contact</h1>
+        {/* </div> */}
       </div>
-    </div>
 
-    <div className='flex-container'>
-      <div className='contact-container'>
-          <h2 className='page-subtitles'>Phone:</h2>
-          <p className='contact-text'>(216-555-0102)</p>
-          <h2 className='page-subtitles'>Email:</h2>
-          <p className='contact-text'>restaurant@demo.com</p>
-          <h2 className='page-subtitles'>Location:</h2>
-          <p className='contact-text'>Cleveland, OH 44112</p>
-          <h2 className='page-subtitles'>Hours:</h2>
-          <p className='contact-text'>Mon-Fri: 11a - 9p<br></br>Sat-Sun: 11a - 11p</p>
-          {/* <p className='contact-text'>Sat-Sun: 11a - 11p</p> */}
+      <div className='flex-container'>
+        <div className='contact-container'>
+            <h2 className='page-subtitles'>Phone:</h2>
+            <p className='contact-text'>614-555-0102</p>
+            <h2 className='page-subtitles'>Email:</h2>
+            <p className='contact-text'>restaurant@demo.com</p>
+            <h2 className='page-subtitles'>Location:</h2>
+            <p className='contact-text'> 123 Address Avenue<br></br>Columbus, OH 43214</p>
+            <h2 className='page-subtitles'>Hours:</h2>
+            <p className='contact-text'>Mon-Fri: 11a - 9p<br></br>Sat-Sun: 11a - 11p</p>
+            {/* <p className='contact-text'>Sat-Sun: 11a - 11p</p> */}
+        </div>
       </div>
-    </div>
 
-      {/* Embedded Google Maps */}
-      <div className='map-container'>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50657.81662060361!2d-81.73197107276215!3d41.495323366621946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C%20OH!5e0!3m2!1sen!2sus!4v1713043701164!5m2!1sen!2sus" width="600" height="550"></iframe>  
+        {/* Embedded Google Maps */}
+        <div className='flex-container'>
+          <div className='map-container'>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50657.81662060361!2d-81.73197107276215!3d41.495323366621946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C%20OH!5e0!3m2!1sen!2sus!4v1713043701164!5m2!1sen!2sus" width="600" height="550"></iframe>  
+          </div>
+        </div>
       </div>
     </>
   )

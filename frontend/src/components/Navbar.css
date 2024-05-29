@@ -14,8 +14,7 @@ body {
   }
 
 .navbar {
-    background-color: #312512;
-    color: white;
+    background-color: #C41230;
     overflow: hidden;
 
     ul {
@@ -32,7 +31,7 @@ body {
 } */
 
 .navbar li:hover {
-    background-color: white;
+    background-color: #dad4c6;
     cursor: pointer;
 }
 
@@ -51,10 +50,10 @@ body {
 }
 
 .nav-title {
-    font-size: 32px;
+    font-size: 40px;
     margin: 20px 10px;
     text-decoration: none;
-    color: gold;
+    color: black;
     font-family: "Kanit", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -72,12 +71,13 @@ body {
 
 .nav-menu-item a {
     text-decoration: none;
-    color: gold;
+    color: black;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 415px) {
     .navbar {
-        background-color: #312512;
+        background-color: #C41230;
         color: white;
         overflow: hidden;
     
@@ -90,7 +90,9 @@ body {
         }
 
         .nav-menu {
-            align-items: right;
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
         }
     }
 }
