@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
-import Services from './pages/Services';
+import Specials from './pages/Specials';
 import Contact from './pages/Contact';
 import { Route, Routes } from 'react-router-dom'
 
@@ -29,7 +29,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
-          <Route path='/services' element={<Services />} />
+          <Route path='/services' element={<Specials />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </div>
