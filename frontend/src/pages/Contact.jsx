@@ -1,5 +1,7 @@
 import React from 'react'
 import '../App.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faEnvelope, faLocationDot, faClock } from '@fortawesome/free-solid-svg-icons'
 
 function Contact() {
   return (
@@ -13,15 +15,18 @@ function Contact() {
 
       <div className='flex-container'>
         <div className='contact-container'>
-            <h2 className='page-subtitles'>Phone:</h2>
+            <h2 className='page-subtitles'>Phone
+              <FontAwesomeIcon className='icons' icon={faPhone} /></h2>
             <p className='contact-text'>614-555-0102</p>
-            <h2 className='page-subtitles'>Email:</h2>
+            <h2 className='page-subtitles'>Email
+              <FontAwesomeIcon className='icons' icon={faEnvelope} /></h2>
             <p className='contact-text'>restaurant@demo.com</p>
-            <h2 className='page-subtitles'>Location:</h2>
+            <h2 className='page-subtitles'>Location
+              <FontAwesomeIcon className='icons' icon={faLocationDot} /></h2>
             <p className='contact-text'> 123 Address Avenue<br></br>Columbus, OH 43214</p>
-            <h2 className='page-subtitles'>Hours:</h2>
+            <h2 className='page-subtitles'>Hours
+              <FontAwesomeIcon className='icons' icon={faClock} /></h2>
             <p className='contact-text'>Mon-Fri: 11a - 9p<br></br>Sat-Sun: 11a - 11p</p>
-            {/* <p className='contact-text'>Sat-Sun: 11a - 11p</p> */}
         </div>
       </div>
 
