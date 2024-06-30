@@ -1,16 +1,14 @@
 import './App.css'
 import pb from './lib/pocketbase'
-import { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Menu from './pages/Menu';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import { useState, useEffect } from 'react'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Menu from './pages/Menu'
+import About from './pages/About'
+import Contact from './pages/Contact'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
-
-
   const [greeting, setGreeting] = useState('');
   const getGreeting = () => {
       pb
