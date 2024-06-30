@@ -94,9 +94,24 @@ button {
   background-color: lightgray;
   padding-bottom: 50px;
   margin-bottom: 50px;
+  padding-top: 25px;
 }
 
 .home-text {
+  font-weight: bold;
+}
+
+.story {
+  width: 75%;
+}
+
+.home-paragraph {
+  margin: auto;
+  width: 85%;
+  padding-top: 20px;
+}
+
+.bolder {
   font-weight: bold;
 }
 
@@ -108,8 +123,8 @@ button {
   padding-bottom: 50px;
 }
 
-.testing {
-  
+.home-image {
+  padding-top: 20px;
 }
 
 /* Menu */
@@ -234,25 +249,38 @@ iframe {
   box-shadow: 10px 10px;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 576px) {
   body {
-    height: 50%;
+    /* height: 50%; */
+  }
+
+  .card-tab {
+    border-style: solid;
+    border-color: black;
+    padding: 35px;
+    box-shadow: 10px 10px;
+    width: 250px;
+    text-align: center;
+    font-size: 33px;
+    color: black;
+    background-color: #C41230;
+    font-weight: bold;
   }
 
   .main-container {
     margin-bottom: 50px;
   }
 
-  .home-paragraph {
-
+  .page-subtitles {
+    width: 250px;
   }
 
   .menu-container {
     width: 98%;
   }
 
-  .specials, .contact-container {
-    width: 93%;
+  .story, .specials, .menu-container, .contact-container {
+    width: 85%;
   }
 
   .column {
@@ -270,6 +298,14 @@ iframe {
     margin-bottom: 50px;
     width: 65%;
     margin: auto;
+  }
+
+  iframe {
+    height: 400px;
+  }
+
+  .home-image {
+    width: 90%;
   }
 
   /* .image-container {
