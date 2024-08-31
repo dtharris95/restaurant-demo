@@ -6,13 +6,11 @@
 }
 
 body {
-    background-image: url(img/gray-white-background.jpg);
 
 }
 
 .main-container {
-  background-image: url(img/gray-white-background.jpg);
-  /* background-repeat: repeat; */
+  color: #252628;
 }
 
 .flex-container {
@@ -37,8 +35,13 @@ button {
 }
 
 .icons {
-  /* text-align: center; */
   padding-top: 23px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.icons-services {
+  /* padding-top: 7px; */
   padding-left: 10px;
   font-size: 20px;
 }
@@ -58,8 +61,8 @@ button {
   width: 300px;
   text-align: center;
   font-size: 44px;
-  color: black;
-  background-color: #C41230;
+  color: #252628;
+  background-color: #e06661;
   font-weight: bold;
 }
 
@@ -68,41 +71,66 @@ button {
   font-size: 40px;
   font-family: "Kanit", sans-serif;
   font-weight: 400;
-  background-color: #C41230;
+  background-color: white;
   border-style: double;
   border-color: black;
   width: 275px;
+  height: 66px;
   display: flex;
   justify-content: center;
+  background-color: #e1b668;
+}
+
+.page-subtitles-services {
+  margin: auto;
+  font-size: 30px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  background-color: white;
+  border-style: double;
+  border-color: black;
+  width: 275px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1b668;
 }
 
 /* Home CSS */
 
 .home-container {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
-.story {
+.story-container {
   text-align: center;
   margin: auto;
   border-style: solid;
   border-color: black;
-  width: 70%;
+  width: 60%;
   box-shadow: 10px 10px;
-  /* background-color: #dad4c6; */
-  background-color: lightgray;
   padding-bottom: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   padding-top: 25px;
 }
 
-.home-text {
-  font-weight: bold;
+.specials-container {
+  text-align: center;
+  margin: auto;
+  border-style: solid;
+  border-color: black;
+  width: 60%;
+  box-shadow: 10px 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
 }
 
-.story {
-  width: 75%;
+
+.home-text {
+  font-weight: bold;
 }
 
 .home-paragraph {
@@ -123,8 +151,18 @@ button {
   padding-bottom: 50px;
 }
 
+.lasagna-image {
+  width: 60%;
+}
+
 .home-image {
-  padding-top: 20px;
+  width: 45%;
+  /* padding-top: 20px; */
+}
+
+.happy-hour-image {
+  width: 30%;
+  padding-bottom: 25px;
 }
 
 /* Menu */
@@ -133,15 +171,23 @@ button {
   border-style: solid;
   border-color: black;
   margin: auto;
-  width: 80%;
+  width: 60%;
   margin-bottom: 50px;
   box-shadow: 10px 10px;
-  color: black;
-  background-color: lightgray;
+  /* color: black; */
+  /* background-color: #252628; */
+  /* display: grid;
+  grid-template-columns: auto auto; */
+  /* background-color: lightgray; */
+  /* background-color: #f4dbb3; */
 }
 
 .menu-container h2 {
-  color: black;
+  /* color: white; */
+}
+
+.menu-container p {
+  /* color: white; */
 }
 
 .menu-flex-container {
@@ -149,7 +195,6 @@ button {
   flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
-  background-color: lightgray;
 }
 
 .menu-title-container {
@@ -184,7 +229,7 @@ button {
 
 }
 
-.entree-items, .side-items, .drink-items {
+.appetizer-items, .entree-items, .side-items, .drink-items {
   font-weight: bold;
 }
 
@@ -192,19 +237,16 @@ hr {
   width: 90%;
 }
 
-/* Specials */
-
-.specials {
-  text-align: center;
+/* Services */
+.services-container {
+  display: grid;
   margin: auto;
+  width: 60%;
+  padding-top: 25px;
+  margin-bottom: 50px;
   border-style: solid;
   border-color: black;
-  width: 70%;
   box-shadow: 10px 10px;
-  background-color: lightgray;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin-bottom: 50px;
 }
 
 /* Contact */
@@ -212,13 +254,14 @@ hr {
 .contact-container {
   display: grid;
   margin: auto;
-  width: 50%;
+  width: 60%;
   padding-top: 25px;
   margin-bottom: 50px;
   border-style: solid;
   border-color: black;
   box-shadow: 10px 10px;
-  background-color: lightgray;
+  /* background-color: #e1b668; */
+  /* background-color: lightgray; */
 }
 
 .contact-text {
@@ -263,7 +306,7 @@ iframe {
     text-align: center;
     font-size: 33px;
     color: black;
-    background-color: #C41230;
+    /* background-color: #C41230; */
     font-weight: bold;
   }
 
@@ -279,7 +322,7 @@ iframe {
     width: 98%;
   }
 
-  .story, .specials, .menu-container, .contact-container {
+  .story-container, .specials-container, .menu-container, .contact-container, .services-container {
     width: 85%;
   }
 
@@ -304,8 +347,21 @@ iframe {
     height: 400px;
   }
 
+  .lasagna-image {
+    width: 85%;
+  }
+
   .home-image {
-    width: 90%;
+    width: 85%;
+  }
+
+  .happy-hour-image {
+    width: 80%;
+    /* padding-bottom: 25px; */
+  }
+
+  .cooking-image {
+    width: 85%;
   }
 
   /* .image-container {

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import contactus from '../img/contactus.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot, faClock } from '@fortawesome/free-solid-svg-icons'
 
@@ -12,6 +13,10 @@ function Contact() {
           <h1 className='card-tab'>Contact</h1>
         {/* </div> */}
       </div>
+
+      {/* <div className='flex-container'>
+          <img className='' alt='Contact Us Image' src={contactus}></img>
+      </div> */}
 
       <div className='flex-container'>
         <div className='contact-container'>

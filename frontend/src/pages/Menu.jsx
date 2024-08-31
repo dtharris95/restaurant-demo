@@ -1,18 +1,52 @@
 import React, { useEffect, useState } from 'react'
 import '../App.css'
-import { Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import pb from '../lib/pocketbase'
 
 function Menu() {
-  const [entree, setEntree] = useState('');
+  const [appetizer, setAppetizer] = useState([]);
+  const [entree, setEntree] = useState([]);
+  const [side, setSide] = useState([]);
+  const [drink, setDrink] = useState([]);
+
+  const getAppetizer = () => {
+    pb
+    .collection('appetizers')
+    .getFullList()
+    .then((res) => setAppetizer(res));
+  }
+  useEffect(() => {
+    getAppetizer();
+  }, []);
+
   const getEntree = () => {
     pb
     .collection('entrees')
     .getFullList()
-    .then((response) => setEntree(response[0]));
+    .then((res) => setEntree(res));
   }
   useEffect(() => {
     getEntree();
+  }, []);
+
+  const getSide = () => {
+    pb
+    .collection('sides')
+    .getFullList()
+    .then((res) => setSide(res));
+  }
+  useEffect(() => {
+    getSide();
+  }, []);
+
+  const getDrink = () => {
+    pb
+    .collection('drinks')
+    .getFullList()
+    .then((res) => setDrink(res));
+  }
+  useEffect(() => {
+    getDrink();
   }, []);
 
   return (
@@ -32,31 +66,12 @@ function Menu() {
         <div className='menu-rows-container'>
           <div className='menu-flex-container'>
               <div className='column'>
-                <h2 className='entree-items'>{entree.entreeName}</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='entree-items'>App #2</h2>
-                <p></p>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='entree-items'>App #3</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-          </div>
-          <div className='menu-flex-container'>
-              <div className='column'>
-                <h2 className='entree-items'>App #4</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='entree-items'>App #5</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='entree-items'>App #6</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                {appetizer.map((appItem) => (
+                  <>
+                    <h2 className='appetizer-items'>{appItem.appName}</h2>
+                    <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </>
+              ))}
               </div>
             </div>
         </div>
@@ -70,30 +85,13 @@ function Menu() {
         <div className='menu-rows-container'>
           <div className='menu-flex-container'>
               <div className='column'>
-                <h2 className='entree-items'>Entree #1</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='entree-items'>Entree #2</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='entree-items'>Entree #3</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-          </div>
-          <div className='menu-flex-container'>
-              <div className='column'>
-                <h2 className='entree-items'>Entree #4</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='entree-items'>Entree #5</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='entree-items'>Entree #6</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                {/* ADD UNIQUE KEY PROPS FOR EACH CHILD ELEMENT -H2 AND P ELEMENTS */}
+                {entree.map((entreeItem) => (
+                  <>
+                    <h2 className='entree-items'>{entreeItem.entreeName}</h2>
+                    <p className='menu-descriptions'>{entreeItem.description}</p>
+                  </>
+                ))}
               </div>
             </div>
         </div>
@@ -107,30 +105,13 @@ function Menu() {
         <div className='menu-rows-container'>
           <div className='menu-flex-container'>
               <div className='column'>
-                <h2 className='side-items'>Side #1</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='side-items'>Side #2</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='side-items'>Side #3</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-          </div>
-          <div className='menu-flex-container'>
-              <div className='column'>
-                <h2 className='side-items'>Side #4</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='side-items'>Side #5</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <div className='column'>
-                <h2 className='side-items'>Side #6</h2>
-                <p className='menu-descriptions'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                {/* ADD UNIQUE KEY PROPS FOR EACH CHILD ELEMENT -H2 AND P ELEMENTS */}
+                {side.map((sideItem) => (
+                  <>
+                    <h2 className='side-items'>{sideItem.sideName}</h2>
+                    <p className='menu-descriptions'>{sideItem.description}</p>
+                  </>
+                ))}
               </div>
           </div>
         </div>
@@ -144,39 +125,15 @@ function Menu() {
         <div className='menu-rows-container'>
         <div className='menu-flex-container'>
               <div className='drink-column'>
-                <h2 className='drink-items'>Drink #1</h2>
-                <p className='menu-descriptions'>$2.30</p>
-              </div>
-              <div className='drink-column'>
-                <h2 className='drink-items'>Drink #2</h2>
-                <p className='menu-descriptions'>$2.50</p>
-              </div>
-              <div className='drink-column'>
-                <h2 className='drink-items'>Drink #3</h2>
-                <p className='menu-descriptions'>$2.30</p>
-              </div>
-              <div className='drink-column'>
-                <h2 className='drink-items'>Drink #4</h2>
-                <p className='menu-descriptions'>$2.15</p>
+                {drink.map((drinkItem) => (
+                  <>
+                    <h2 className='drink-items'>{drinkItem.drinkName}</h2>
+                    <p className='menu-descriptions'>{drinkItem.description}</p>
+                  </>
+                ))}
               </div>
           </div>
           <div className='menu-flex-container'>
-              <div className='drink-column'>
-                <h2 className='drink-items'>Drink #5</h2>
-                <p className='menu-descriptions'>$2.50</p>
-              </div>
-              <div className='drink-column'>
-                <h2 className='drink-items'>Drink #6</h2>
-                <p className='menu-descriptions'>$1.75</p>
-              </div>
-              <div className='drink-column'>
-                <h2 className='drink-items'>Drink #7</h2>
-                <p className='menu-descriptions'>$1.90</p>
-              </div>
-              <div className='drink-column'>
-                <h2 className='drink-items'>Drink #8</h2>
-                <p className='menu-descriptions'>$2.95</p>
-              </div>
           </div>
         </div>
       </div>

@@ -4,11 +4,15 @@ body {
 }
 
 .active {
-    background-color: #c46474;
+    /* background-color: #c46474; */
 }
 
 * {
     box-sizing: border-box;
+}
+
+.dropdown-links {
+    font-weight: bold;
 }
 
 .flex-container {
@@ -17,7 +21,7 @@ body {
 }
 
 .navbar {
-    background-color: #C41230;
+    /* background-color: #252628; */
     overflow: hidden;
 
     ul {
@@ -27,12 +31,16 @@ body {
         display: flex;
         gap: 16px;
         font-size: 20px;
+        margin-right: 10%;
     }
 }
 
-.page-icon {
-    padding-left: 10px;
-    font-size: 24px;
+.logo-image {
+    /* height: 38px;
+    width: 38px; */
+    /* width: 75px; */
+    /* height: 35px; */
+    margin-right: -10px;
 }
 
 .navbar li:hover {
@@ -45,6 +53,9 @@ body {
     display: flex;
     align-items: center;
     padding: 4px;
+    /* color: white; */
+    color: #1c8451;
+    /* color: #e1b668; */
 }
 
 .navbar, .dropdown {
@@ -57,6 +68,7 @@ body {
 .nav-title {
     font-size: 40px;
     margin: 20px;
+    margin-left: 10%;
     text-decoration: none;
     color: black;
     font-family: "Kanit", sans-serif;
@@ -92,27 +104,40 @@ nav .open {
         margin: 0;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
-    
-    .page-icon {
-        padding-left: 5px;
-        font-size: 12px;
+
+    .dropdown-links {
+        font-weight: bold;
     }
 
     .navbar {
-        background-color: #C41230;
+        /* background-color: #C41230; */
         display: flex;
         flex-direction: column;
+    }
+
+    .navbar a {
+        color: #1c8451;
+    }
+
+    .navbar ul {
+        margin-left: 25%;
+        gap: 10px;
     }
 
     .nav-title {
         display: flex;
         margin: 10px;
         font-size: 18px;
+        margin-left: -10%;
         text-decoration: none;
-        color: black;
+        color: #e1b668;
         font-family: "Kanit", sans-serif;
         font-weight: 700;
         font-style: normal;
+    }
+
+    .logo-image {
+        margin-right: -10px;
     }
 
     .menu {
@@ -127,7 +152,7 @@ nav .open {
         right: 15px;
         flex-direction: column;
         border: none;
-        background-color: #C41230;
+        /* background-color: #C41230; */
         font-size: 20px;
         justify-content: center;
     }
@@ -144,7 +169,7 @@ nav .open {
     ul {
         display: none;
         font-size: 15px;
-        position: relative;
-        left: 145px;
+        /* position: relative; */
+        /* margin-right: 10%; */
     }
 }
