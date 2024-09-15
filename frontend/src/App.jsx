@@ -9,16 +9,16 @@ import Contact from './pages/Contact'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [greeting, setGreeting] = useState('');
-  const getGreeting = () => {
-      pb
-      .collection('greeting')
-      .getFullList()
-      .then((response) => setGreeting(response[0]));
-  }
-  useEffect(() => {
-    getGreeting();
-  }, []);
+  // const [greeting, setGreeting] = useState('');
+  // const getGreeting = () => {
+  //     pb
+  //     .collection('greeting')
+  //     .getFullList()
+  //     .then((response) => setGreeting(response[0]));
+  // }
+  // useEffect(() => {
+  //   getGreeting();
+  // }, []);
 
   return (
     <>
