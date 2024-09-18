@@ -11,14 +11,13 @@ import HKTBrandLogo from '../img/HKTBrandLogo.jpg'
 import pb from '../lib/pocketbase'
 
 function Home() {
-  // CHANGE HEADINGONE TO WELCOME!, ETC. DOWN THE LINE
-  const [welcome, setWelcome] = useState([]);
-  const [specials, setSpecials] = useState([]);
-  const [aboutUs, setAboutUs] = useState([]);
-  const [commitment, setCommitment] = useState([]);
-  const [happyHour, setHappyHour] = useState([]);
-  const [diningSpecial, setDiningSpecial] = useState([]);
-  const [drinkSpecial, setDrinkSpecial] = useState([]);
+  const [welcome, setWelcome] = useState('');
+  const [specials, setSpecials] = useState('');
+  const [aboutUs, setAboutUs] = useState('');
+  const [commitment, setCommitment] = useState('');
+  const [happyHour, setHappyHour] = useState('');
+  const [diningSpecial, setDiningSpecial] = useState('');
+  const [drinkSpecial, setDrinkSpecial] = useState('');
 
 const getWelcome = () => {
   pb
@@ -100,13 +99,13 @@ useEffect(() => {
         <div className='carousel-container'>
           <Splide aria-label="My Favorite Images">
             <SplideSlide>
-              <img src={lasagna} alt="Lasagna"/>
+              <img src={lasagna} alt="Lasagna dish"/>
             </SplideSlide>
             <SplideSlide>
-              <img src={ribeye} alt="Image 2"/>
+              <img src={ribeye} alt="Ribeye Steak dish"/>
             </SplideSlide>
             <SplideSlide>
-              <img src={veggieburger} alt="Image 3"/>
+              <img src={veggieburger} alt="Vegetarian burger dish"/>
             </SplideSlide>
           </Splide>
         </div>

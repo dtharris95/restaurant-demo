@@ -177,12 +177,8 @@ button {
   box-shadow: 10px 10px;
 }
 
-.menu-container h2 {
-  /* color: white; */
-}
-
-.menu-container p {
-  /* color: white; */
+.menu-list {
+  list-style: none;
 }
 
 .menu-flex-container {

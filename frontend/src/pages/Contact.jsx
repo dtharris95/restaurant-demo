@@ -6,11 +6,11 @@ import { faPhone, faEnvelope, faLocationDot, faClock } from '@fortawesome/free-s
 import pb from '../lib/pocketbase'
 
 function Contact() {
-  const [contact, setContact] = useState([]);
-  const [phone, setPhone] = useState([]);
-  const [email, setEmail] = useState([]);
-  const [location, setLocation] = useState([]);
-  const [hours, setHours] = useState([]);
+  const [contact, setContact] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [location, setLocation] = useState('');
+  const [hours, setHours] = useState('');
 
   const getContact = () => {
     pb

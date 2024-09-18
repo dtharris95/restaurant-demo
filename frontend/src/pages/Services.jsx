@@ -7,11 +7,11 @@ import { faBookOpen, faBowlFood, faKitchenSet, faShieldHeart, faUtensils } from 
 import pb from '../lib/pocketbase'
 
 function Services() {
-  const [services, setServices] = useState([]);
-  const [personalChef, setPersonalChef] = useState([]); // Personal Chef
-  const [mealPrep, setMealPrep] = useState([]); // Meal Prep
-  const [catering, setCatering] = useState([]); // Catering
-  const [cooking, setCooking] = useState([]); // Cooking Classes
+  const [services, setServices] = useState('');
+  const [personalChef, setPersonalChef] = useState('');
+  const [mealPrep, setMealPrep] = useState('');
+  const [catering, setCatering] = useState('');
+  const [cooking, setCooking] = useState('');
 
   const getServices = () => {
     pb
