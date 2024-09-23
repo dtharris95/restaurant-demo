@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import '../App.css'
-import contactus from '../img/contactus.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot, faClock } from '@fortawesome/free-solid-svg-icons'
 import pb from '../lib/pocketbase'
@@ -72,17 +71,21 @@ function Contact() {
       <div className='flex-container'>
         <div className='contact-container'>
             <h2 className='page-subtitles'>{phone.subHeadings}
-              <FontAwesomeIcon className='icons' icon={faPhone} /></h2>
-            <p className='contact-text'>{phone.description}</p>
+              <FontAwesomeIcon className='icons' icon={faPhone} />
+            </h2>
+              <p tabIndex='0' className='contact-text'>{phone.description}</p>
             <h2 className='page-subtitles'>{email.subHeadings}
-              <FontAwesomeIcon className='icons' icon={faEnvelope} /></h2>
-            <p className='contact-text'>{email.description}</p>
+              <FontAwesomeIcon className='icons' icon={faEnvelope} />
+            </h2>
+              <p tabIndex='0' className='contact-text'>{email.description}</p>
             <h2 className='page-subtitles'>{location.subHeadings}
-              <FontAwesomeIcon className='icons' icon={faLocationDot} /></h2>
-            <p className='contact-text'> {location.description}</p>
+              <FontAwesomeIcon className='icons' icon={faLocationDot} />
+            </h2>
+              <p tabIndex='0' className='contact-text'> {location.description}</p>
             <h2 className='page-subtitles'>{hours.subHeadings}
-              <FontAwesomeIcon className='icons' icon={faClock} /></h2>
-            <p className='contact-text'>{hours.description}</p>
+              <FontAwesomeIcon className='icons' icon={faClock} />
+            </h2>
+              <p tabIndex='0' className='contact-text'>{hours.description}</p>
         </div>
       </div>
 

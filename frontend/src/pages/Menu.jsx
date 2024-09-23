@@ -12,6 +12,8 @@ function Menu() {
   const [entree, setEntree] = useState([]);
   const [side, setSide] = useState([]);
   const [drink, setDrink] = useState([]);
+  const [softDrinkHeading, setSoftDrinkHeading] = useState('');
+  const [beerHeading, setBeerHeading] = useState('');
   const [alcohol, setAlcohol] = useState([]);
 
   const getMenuHeading = () => {
@@ -84,6 +86,17 @@ function Menu() {
     getSide();
   }, []);
 
+  const getSoftDrinkHeading = () => {
+    pb
+    .collection('menu_softDrinks')
+    .getOne('rn80ii3uk6wumkj')
+    .then((res) => setSoftDrinkHeading(res))
+  }
+
+  useEffect(() => {
+    getSoftDrinkHeading();
+  }, []);
+
   const getDrink = () => {
     pb
     .collection('menu_softDrinks')
@@ -92,6 +105,17 @@ function Menu() {
   }
   useEffect(() => {
     getDrink();
+  }, []);
+
+  const getBeerHeading = () => {
+    pb
+    .collection('menu_alcohol')
+    .getOne('j1r3nxvzpamacla')
+    .then((res) => setBeerHeading(res))
+  }
+
+  useEffect(() => {
+    getBeerHeading();
   }, []);
 
   const getAlcohol = () => {
@@ -122,88 +146,90 @@ function Menu() {
       </div>
       
       <div className='flex-container'>
-      <div className='menu-container'>
-        {/* Appetizers Section */}
-        <div className='menu-title-container'>
-          <h1 className='page-subtitles'>{appHeading.headingName}</h1>
-        </div>
-        <div className='menu-rows-container'>
-          <div className='menu-flex-container'>
-              <div className='column'>
-                {appetizer.map((appItem) => (
-                  <li className='menu-list' key={appItem.id}>
-                    <h2 className='appetizer-items'>{appItem.appName}</h2>
-                    <p className='menu-descriptions'>{appItem.description}</p>
-                  </li>
-              ))}
+        <div className='menu-container'>
+
+          {/* Appetizers Section */}
+          <div className='menu-title-container'>
+            <h1 tabIndex='0' className='page-subtitles'>{appHeading.headingName}</h1>
+          </div>
+          <div className='menu-rows-container'>
+            <div className='menu-flex-container'>
+                <div className='column'>
+                  {appetizer.map((appItem) => (
+                    <li className='menu-list' key={appItem.id}>
+                      <h2 tabIndex='0' className='appetizer-items'>{appItem.appName}</h2>
+                      <p className='menu-descriptions'>{appItem.description}</p>
+                    </li>
+                ))}
+                </div>
               </div>
+          </div>
+
+          {/* Entrees Section */}
+          <div className='menu-title-container'>
+              <h1 tabIndex='0' className='page-subtitles'>{entreeHeading.headingName}</h1>
+          </div>
+          <div className='menu-rows-container'>
+            <div className='menu-flex-container'>
+                <div className='column'>
+                  {entree.map((entreeItem) => (
+                    <li className='menu-list' key={entreeItem.id}>
+                      <h2 tabIndex='0' className='entree-items'>{entreeItem.entreeName}</h2>
+                      <p className='menu-descriptions'>{entreeItem.description}</p>
+                    </li>
+                  ))}
+                </div>
+              </div>
+          </div>
+
+          {/* Sides section */}
+          <div className='menu-title-container'>
+            <h1 tabIndex='0' className='page-subtitles'>{sideHeading.headingName}</h1>
+          </div>
+          <div className='menu-rows-container'>
+            <div className='menu-flex-container'>
+                <div className='column'>
+                  {side.map((sideItem) => (
+                    <li className='menu-list' key={sideItem.id}>
+                      <h2 tabIndex='0' className='side-items' key={sideItem.id}>{sideItem.sideName}</h2>
+                      <p className='menu-descriptions'>{sideItem.description}</p>
+                    </li>
+                  ))}
+                </div>
             </div>
-        </div>
+          </div>
 
-        {/* Entrees Section */}
-        <div className='menu-title-container'>
-            <h1 className='page-subtitles'>{entreeHeading.headingName}</h1>
-        </div>
-        <div className='menu-rows-container'>
+          {/* Drinks */}
+          <div className='menu-title-container'>
+            <h1 tabIndex='0' className='page-subtitles'>{drinkHeading.headingName}</h1>
+          </div>
+          <div className='menu-rows-container'>
           <div className='menu-flex-container'>
-              <div className='column'>
-                {entree.map((entreeItem) => (
-                  <li className='menu-list' key={entreeItem.id}>
-                    <h2 className='entree-items'>{entreeItem.entreeName}</h2>
-                    <p className='menu-descriptions'>{entreeItem.description}</p>
-                  </li>
-                ))}
-              </div>
+                <div className='drink-column'>
+                  <h2 className='drink-items'>{softDrinkHeading.subHeading}</h2>
+                  <hr></hr>
+                  {drink.map((drinkItem) => (
+                    <li className='menu-list' key={drinkItem.id}>
+                      <h2 className='drink-items'>{drinkItem.drinkName}</h2>
+                      {/* <p className='menu-descriptions'>{drinkItem.description}</p> */}
+                    </li>
+                  ))}
+                </div>
+                <div className='drink-column'>
+                  <h2 className='drink-items'>{beerHeading.subHeading}</h2>
+                  <hr></hr>
+                  {alcohol.map((alcoholItem) => (
+                    <li className='menu-list' key={alcoholItem.id}>
+                      <h2 className='drink-items'>{alcoholItem.alcoholName}</h2>
+                      {/* <p className='menu-descriptions'>{alcoholItem.description}</p> */}
+                    </li>
+                  ))}
+                </div>
             </div>
-        </div>
-
-        {/* Sides section */}
-        <div className='menu-title-container'>
-          <h1 className='page-subtitles'>{sideHeading.headingName}</h1>
-        </div>
-        <div className='menu-rows-container'>
-          <div className='menu-flex-container'>
-              <div className='column'>
-                {side.map((sideItem) => (
-                  <li className='menu-list' key={sideItem.id}>
-                    <h2 className='side-items' key={sideItem.id}>{sideItem.sideName}</h2>
-                    <p className='menu-descriptions'>{sideItem.description}</p>
-                  </li>
-                ))}
-              </div>
           </div>
         </div>
-
-        {/* Drinks */}
-        <div className='menu-title-container'>
-          <h1 className='page-subtitles'>{drinkHeading.headingName}</h1>
-        </div>
-        <div className='menu-rows-container'>
-        <div className='menu-flex-container'>
-              <div className='drink-column'>
-                {drink.map((drinkItem) => (
-                  <li className='menu-list' key={drinkItem.id}>
-                    <h2 className='drink-items'>{drinkItem.drinkName}</h2>
-                    <p className='menu-descriptions'>{drinkItem.description}</p>
-                  </li>
-                ))}
-              </div>
-              <div className='drink-column'>
-                {alcohol.map((alcoholItem) => (
-                  <li className='menu-list' key={alcoholItem.id}>
-                    <h2 className='drink-items'>{alcoholItem.alcoholName}</h2>
-                    <p className='menu-descriptions'>{alcoholItem.description}</p>
-                  </li>
-                ))}
-              </div>
-          </div>
-          <div className='menu-flex-container'>
-          </div>
-        </div>
-      </div>
       </div>
     </div>
-    <div className='main-container'></div>
     </>
   )
 }

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../App.css'
 import cookingset from '../img/cookingset.jpg'
-import columbusSkylineBanner from '../img/columbusSkylineBanner.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBookOpen, faBowlFood, faKitchenSet, faShieldHeart, faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { faBookOpen, faBowlFood, faKitchenSet, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import pb from '../lib/pocketbase'
 
 function Services() {
@@ -68,7 +67,8 @@ function Services() {
     <>
     <div className='main-container'>
       <div className='flex-container'>
-            <h1 className='card-tab'>{services.mainHeading}</h1>
+        {/* Services */}
+        <h1 tabIndex='0' className='card-tab'>{services.mainHeading}</h1>
       </div>
 
       <div className='flex-container'>
@@ -80,22 +80,22 @@ function Services() {
           <h1 className='page-subtitles-services'>{personalChef.subHeadings}
               <FontAwesomeIcon className='icons-services'  icon={faKitchenSet}/>
           </h1>
-          <h2 className='services-description'>{personalChef.description}</h2>
+            <h2 tabIndex='0' className='services-description'>{personalChef.description}</h2>
 
           <h1 className='page-subtitles'>{mealPrep.subHeadings}
               <FontAwesomeIcon className='icons' icon={faUtensils} />
           </h1>
-          <h2 className='services-description'>{mealPrep.description}</h2>
+            <h2 tabIndex='0' className='services-description'>{mealPrep.description}</h2>
 
           <h1 className='page-subtitles'>{catering.subHeadings}
               <FontAwesomeIcon className='icons' icon={faBowlFood} />
           </h1>
-          <h2 className='services-description'>{catering.description}</h2>
+            <h2 tabIndex='0' className='services-description'>{catering.description}</h2>
           
           <h1 className='page-subtitles-services'>{cooking.subHeadings}
               <FontAwesomeIcon className='icons-services' icon={faBookOpen} />
           </h1>
-          <h2 className='services-description'>{cooking.description}</h2>
+            <h2 tabIndex='0' className='services-description'>{cooking.description}</h2>
         </div>
       </div>
     </div>

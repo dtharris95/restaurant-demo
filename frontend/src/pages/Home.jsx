@@ -112,30 +112,34 @@ useEffect(() => {
 
           <div className='flex-container'>
           <div className='story-container'>
-            <h1 className='page-subtitles'>{aboutUs.subHeadings}</h1>
-            {/* ADD PADDING UNDER BELOW PARAGRAPH */}
+            {/* About Us */}
+            <h1 tabIndex='0' className='page-subtitles'>{aboutUs.subHeadings}</h1>
             <h2 className='home-paragraph'>{aboutUs.description}
               
             </h2>
-            <img className='home-image' src={HKTBrandLogo}></img>
-            <h1 className='page-subtitles'>{commitment.subHeadings}</h1>
-            {/* ADD PADDING UNDER BELOW PARAGRAPH */}
+            <img className='home-image' alt='Harris Kitchen Table Logo' src={HKTBrandLogo}></img>
+            {/* Commitment */}
+            <h1 tabIndex='0' className='page-subtitles'>{commitment.subHeadings}</h1>
             <h2 className='home-paragraph'>{commitment.description}</h2>
 
-            <img className='home-image' alt='Columbus Skyline' src={columbusSkylineBanner}></img>
+            <img tabIndex='0' className='home-image' alt='Columbus Skyline' src={columbusSkylineBanner}></img>
           </div>
         </div>
 
         <div className='flex-container'>
+          {/* Specials */}
           <h1 className='card-tab'>{specials.mainHeading}</h1>
         </div>
 
         <div className='flex-container'>
             <div className='specials-container'>
-              <img className='happy-hour-image' alt='Happy Hour' src={happyHourimg}></img>
-              <h1 className='page-subtitles'>{happyHour.subHeadings}</h1>
+              <img className='happy-hour-image' alt='Sign that says Happy Hour' src={happyHourimg}></img>
+              {/* Happy Hour */}
+              <h1 tabIndex='0' className='page-subtitles'>{happyHour.subHeadings}</h1>
+              {/* Dining Specials */}
               <h1 className='home-text'>{diningSpecial.subHeadings}</h1>
               <h2>{diningSpecial.description}</h2>
+              {/* Drink Specials */}
               <h1 className='home-text'>{drinkSpecial.subHeadings}</h1>
               <h2>{drinkSpecial.description}</h2>
             </div>

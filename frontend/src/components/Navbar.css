@@ -3,10 +3,6 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.active {
-    /* background-color: #c46474; */
-}
-
 * {
     box-sizing: border-box;
 }
@@ -21,7 +17,6 @@ body {
 }
 
 .navbar {
-    /* background-color: #252628; */
     overflow: hidden;
 
     ul {
@@ -36,33 +31,27 @@ body {
 }
 
 .logo-image {
-    /* height: 38px;
-    width: 38px; */
-    /* width: 75px; */
-    /* height: 35px; */
     margin-right: -10px;
 }
 
 .navbar li:hover {
-    background-color: #dad4c6;
     cursor: pointer;
+    margin: auto;
 }
 
 .navbar a {
     height: 100%;
+    /* width: 100%; */
     display: flex;
     align-items: center;
-    padding: 4px;
-    /* color: white; */
+    padding: 10px;
     color: #1c8451;
-    /* color: #e1b668; */
 }
 
 .navbar, .dropdown {
     display: flex;
     justify-content: space-between;
     padding: 0 16px;
-    /* gap: 32px; */
 }
 
 .nav-title {

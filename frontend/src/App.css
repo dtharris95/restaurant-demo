@@ -37,7 +37,6 @@ button {
 }
 
 .icons-services {
-  /* padding-top: 7px; */
   padding-left: 10px;
   font-size: 20px;
 }
@@ -161,6 +160,7 @@ button {
 }
 
 .carousel-container {
+  padding-top: 3%;
   width: 50%;
   justify-content: center;
   margin: auto;
@@ -192,13 +192,9 @@ button {
   padding-top: 30px;
 }
 
-.menu-descriptions {
-
-}
-
 .menu-rows-container {
   margin-bottom: 50px;
-  width: 70%;
+  width: 50%;
   justify-content: center;
   margin: auto;
 }
@@ -323,7 +319,7 @@ iframe {
   }
 
   .drink-column {
-    padding: 5px;
+    padding: 20px;
   }
 
   .map-container {
@@ -346,7 +342,6 @@ iframe {
 
   .happy-hour-image {
     width: 80%;
-    /* padding-bottom: 25px; */
   }
 
   .cooking-image {
@@ -356,11 +351,5 @@ iframe {
   .contact-text {
     display: grid;
     justify-content: center;
-    /* width: 100%; */
   }
-
-  /* .image-container {
-    height: 800px;
-    width: 45%;
-  } */
 }
